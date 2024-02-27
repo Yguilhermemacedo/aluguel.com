@@ -1,0 +1,396 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+    .cabecalho{
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .msg-header{
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+
+    .bxs-user-circle{
+        margin-top: 5px;
+        font-size: 1.55rem;
+        font-weight: 600;
+        color: #1d1d1c;
+    }
+
+    .menu{
+        height: 400px;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-right: 2px solid #c6c6c6;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        padding: 4px;
+    }
+
+    .menu a:hover{
+        border-radius: 1px 10px 10px 10px;
+        transition: .6s;
+        letter-spacing: 0.5px;
+        transform: scale(1.0);       
+        background-color: #ffd600;
+    }
+
+    .select-menu{
+        background-color: #ffd600;
+    }
+
+    .link-login{
+        text-decoration: none;
+        color: #1d1d1c;
+        font-weight: 500;
+        padding-right: 1rem;
+    }
+
+    /* Meus imóveis */
+    #imoveis{
+        height: 500px;
+        width: 100%;
+        padding: 10px;  
+    }
+
+    #imoveis h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .adicionar{
+        background-color: #ffd600;
+        font-weight: 500;
+        width: 140px;
+        outline: none;
+        border: none;
+        padding: 5px;
+        border-radius: 20px;
+    }
+
+    .bx-plus{
+        align-items: center ;
+        font-weight: 600;
+    }
+
+    .adicionar:hover{
+        transform: scale(1.0);
+        font-weight: 600;
+        transition: .5s;
+        box-shadow: 3px 3px 0px black;
+    }
+
+    .imoveis-container{
+        height: auto;
+        width: 900px;
+        padding: 20px;
+        margin: 1rem auto;
+    }   
+
+    .imovel{
+        height: auto;
+        width: 100%;
+        display: flex;
+        background-color: #c6c6c60e;
+        padding: 5px;
+        flex-direction: row;
+        border-radius: 10px;
+        gap: 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.274);
+        /* box-shadow: 0px 0px 8px #0000005e; */
+    }
+
+    .img-imovel{
+        height: 300px;
+        width: 200px;
+    }
+
+    .imovel-infos{
+        margin-top: 5rem;
+    }
+
+    .imovel p{
+        font-size: 1.15rem;
+        font-weight: 600;
+    }
+
+    .editar{
+        height: 30px;
+        width: 200px;
+        position: relative;
+        top: 15rem;
+        right: 5rem;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        background-color: #00a651;
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    .editar:hover{
+        box-shadow: 2px 2px 0px #00ff37;
+        transform: scale(1.1);
+        transition: .5s;
+        
+    }
+
+    /* Modal Adicionar imóvel */
+
+    #fade{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 5;
+    }
+
+    #modal-imovel{
+        height: 500px;
+        width: 50%;
+        position:fixed;
+        top: 1rem;
+        left: 18rem;
+        padding: 1rem;
+        bottom: 11rem;
+        background-color: #ffffff;
+        border-radius: 5px;
+        z-index: 10;
+        max-width: 90%;
+        
+    }
+
+    .modal-imovel-header{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .fechar-modal{
+        height: 39px;
+        width: 39px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid black;
+    }
+
+    .bx-x{
+        font-size: 1.27rem;
+        cursor: pointer;    
+        margin-top: 8px;
+    }
+
+    .fechar-modal:hover{
+        border-radius: 50%;
+        background-color: #ffd600;
+        box-shadow: 2px 2px 0px black;
+        transition: .5s;
+    }
+
+    .modal-imovel-body{
+        height: 400px;
+        padding: 0.5rem;
+    }
+
+    .modal-imovel-body > form{
+        display: flex;
+        height: 700px;        
+        flex-direction: column;
+    }
+
+    .modal-imovel-body label{
+        font-size: 15px;
+    }
+
+    #nome{
+        max-width: 400px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 3px;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color: #f8f7f441;
+    }
+
+     #nascimento{
+        max-width: 200px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 3px;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color: #f8f7f441;
+    }
+
+    #rg{
+        max-width: 300px;
+        padding: 3px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color: #f8f7f441;
+    } 
+
+     #cpf{
+        max-width: 300px;
+        padding: 3px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color:#f8f7f441;
+        margin-bottom: 1rem;
+    }
+
+    .btn-concluir{
+        max-width: 600px;
+        display: block;
+        margin: auto;
+    } 
+
+    form > .infos-imovel{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #cidade{
+        max-width: 400px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 3px;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color: #f8f7f441;
+    }
+
+    #endereco{
+        max-width: 400px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 3px;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color: #f8f7f441;
+    }
+
+    #numero{
+        max-width: 60px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 3px;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color: #f8f7f441;
+    }
+
+    #bairro{
+        max-width: 400px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 3px;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color: #f8f7f441;
+    }
+
+    .infos-imovel p{
+        color: #3a3936;
+        margin: 1rem;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .tipo-imoveis{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 400px;
+    }
+
+    .bx-home{
+        font-size: 1.25rem;
+    }
+
+    .bx-building{
+        font-size: 1.25rem;
+    }
+
+    .bx-store-alt{
+        font-size: 1.25rem;
+    }
+
+    #valor-imovel{
+        max-width: 200px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 3px;
+        border: 1px solid rgba(85, 85, 85, 0.247);
+        background-color: #f8f7f441;
+    }
+
+    .btn-concluir{
+        width: 300px;
+        padding: 5px;
+        font-size: 1rem;
+        outline: none;
+        border: 2px solid #ffd600;
+        background-color: transparent;
+        border-radius: 20px;
+    }
+
+    .bx-check{
+        font-size: 1.15rem;
+    }
+
+    .btn-concluir:hover{
+        font-weight: 600;
+        background-color: #ffd600;
+        box-shadow: 3px 3px 0px #1d1d1c;
+        transform: scale(1.1);
+        transition: .5s;
+    }
+
+    #fade.hide,
+    #modal-imovel.hide{
+        display: none;
+    }
+
+    /* Meus imóveis */
+
+    .imovel{
+        display: none;
+    }

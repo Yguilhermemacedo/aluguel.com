@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="cadastro-style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="#" class="link-header">Aluguel <span style="color: #f4a100; font-weight: 600; text-decoration: none;">.com</span></a>
+    </header>
+    <main class="container">
+        
+        <form>
+            <h1>Cadastro</h1>
+            <p style="color: #f4a100; font-weight: 500; text-align: center;">Bem vindo á plataforma mais fácil e pratica de gerenciar suas </p>
+            <div class="formulario">
+                <div>
+                    <label for="nome"><i class='bx bx-user'></i></label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu usuário" required max="12">
+                </div>
+                <div>
+                    <label for="cpf"></label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf" required maxlength="12">
+                </div>
+                <div>
+                    <label for="rg"></label>
+                    <input type="text" name="rg" id="rg" required maxlength="12">
+                </div>
+                <div>
+                    <label for="email"></label>
+                    <input type="text" name="email" id="email" required maxlength="16">
+                </div>
+
+                <div>
+                    <label for="senha"><i class='bx bx-lock-alt'></i></label>
+                    <input type="text" name="senha" id="senha" placeholder="Crie uma senha de 4 dígitos" required maxlength="4">
+                   
+                </div>
+                <div>
+                    <label for="confirm-senha"><i class='bx bxs-lock-alt' ></i></label>
+                    <input type="password" name="senha" id="confirm-senha" placeholder="Confirme sua senha" maxlength="4" required>
+                </div>
+                
+                <input type="submit" value="Concluir" class="btn-cadastro">
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho"><h1>Aluguel.<strong style="color: #f4a100;">com</strong></h1>  <span class="msg-header"> <a href="login.html" class="link-login" target="_blank">Fazer Login</a><i class='bx bxs-user-circle'></i></span></header>
+    
+    <main class="container">
+        <aside class="menu">
+            <a href="#" class=".select-menu"><i class='bx bx-building-house'></i> Meus imóveis</a>
+            <a href="#"><i class='bx bx-money-withdraw'></i> Cobranças</a>
+            <a href="#"><i class='bx bx-receipt'></i> Contas Água/Luz</a>
+            <a href="#" ><span class="contrato-link"><i class='bx bx-book-content'></i> Criar contratos</span></a>
+        </aside>
+        <section id="imoveis">
+            <h2>Meus <span style="color: #f4a100;">imóveis</span></h2>
+            <button class="adicionar" onclick="abrirModalImovel()"><i class='bx bx-plus'></i> Adicionar</button>
+            <div class="imoveis-container">
+                <div class="imovel">
+                    
+                    <div class="imovel-infos">
+                        <p>Locatário:</p>
+                        <span class="locatario"></span>
+                        <p>Endereço</p>
+                        <span class="endereço"></span>
+                        <p>Valor do Aluguel</p>
+                        <span class="valor-aluguel"></span>
+                    </div>
+                    <button class="editar" onclick="editar()"><i class='bx bxs-pencil'></i> Editar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="fade" class="hide"></div>
+        <div id="modal-imovel" class="hide">
+            <div class="modal-imovel-header">
+                <h1>Adicionar <span style="color: #f4a100; font-weight: 600;">imóveis</span></h1>
+                <button class="fechar-modal"><i class='bx bx-x'></i></button>
+            </div>
+            <div class="modal-imovel-body">
+                <form>
+                    <h3>Informações do locatário</h3>
+                    <label for="nome">Nome</label>
+                     <input type="text" name="nome" id="nome" required placeholder="Nome completo">                   
+                    
+                     <label for="nascimento">Data de nascimento</label>
+                    <input type="date" name="nascimento" id="nascimento" required>
+                    <label for="rg">RG</label>
+                    <input type="text" name="identidade" id="rg" required placeholder="Número de identidade" maxlength="9">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" maxlength="11" required placeholder="Número CPF">
+
+                    <div class="infos-imovel">
+                        <h4>Informações do imóvel</h4>
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" name="cidade" id="cidade" required placeholder="São Paulo, Rio de Janeiro, Minas Gerais...">
+                                    <label for="endereco">Endereço</label>
+                                    <input type="text" name="endereco" id="endereco" required placeholder="Rua Brasil">
+                                    <label for="numero">Número</label>
+                                    <input type="text" name="numero" id="numero" required maxlength="4" placeholder="1234">
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
+                                    
+                                        <p>Selecione o tipo de imóvel:</p>
+                                        <div class="tipo-imoveis">
+                                        <input type="radio" name="imovel" id="casa"><i class='bx bx-home'></i> Casa
+                                        <input type="radio" name="imovel" id="predio"><i class='bx bx-building'></i> Apartamento
+                                        <input type="radio" name="imovel" id="comercio"><i class='bx bx-store-alt'></i> Comércio
+                                    </div>
+                                    <p>Digite abaixo o valor do aluguel/imóvel.</p>
+                                    <label for="valor-imovel">Inserir o valor:</label>
+                                    <input type="text" name="valor" id="valor-imovel" required>
+                    </div>
+                </form>
+                        <input type="submit" class="btn-concluir">
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
